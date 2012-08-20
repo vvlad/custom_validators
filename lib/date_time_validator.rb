@@ -18,7 +18,7 @@ class DateTimeValidator < ActiveModel::EachValidator
   def expected_value(record,helper)
     case helper
     when Symbol then record.send(helper)
-    when Proc then record.instance_veval(&helper)
+    when Proc then record.instance_eval(&helper)
     when Date, DateTime, Time then helper
     else
       raise ArgumentError, "unknown class `#{helper.class}' expected to be a Symbol, Proc, Date, DateTime, Time"
