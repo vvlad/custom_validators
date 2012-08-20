@@ -1,4 +1,5 @@
 # CustomValidators
+Validators for ActiveModel
 
 TODO: Write a gem description
 
